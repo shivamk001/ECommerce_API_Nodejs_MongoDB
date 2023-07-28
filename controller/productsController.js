@@ -10,7 +10,7 @@ module.exports.createProduct=async (req, res)=>{
             quantity: quantity
         })
 
-        return res.status(200).json({
+        return res.status(201).json({
             message: 'Product created successfully',
             data:{
                 product:{
@@ -22,7 +22,7 @@ module.exports.createProduct=async (req, res)=>{
     }
     catch(err){
         console.log('Error:', err)
-        return res.status(401).json({
+        return res.status(500).json({
             message: 'Product creation failed'
         })
     }
@@ -47,7 +47,7 @@ module.exports.deleteProduct=async (req, res)=>{
             })
         }
         else{
-            return res.status(200).json({
+            return res.status(404).json({
                 message: 'Product does not exist'
             })
         }
@@ -55,7 +55,7 @@ module.exports.deleteProduct=async (req, res)=>{
     }
     catch(err){
         console.log('Error:', err)
-        return res.status(401).json({
+        return res.status(500).json({
             message: 'Product deletion failed'
         })
     }
@@ -83,7 +83,7 @@ module.exports.allProducts=async (req, res)=>{
     }
     catch(err){
         console.log('Error:', err)
-        return res.status(401).json({
+        return res.status(500).json({
             message: 'Products listing failed'
         })
     }
@@ -114,14 +114,14 @@ module.exports.updateProduct=async (req, res)=>{
             })
         }
         else{
-            return res.status(200).json({
+            return res.status(404).json({
                 message: 'Product does not exist'
             })
         }
     }
     catch(err){
         console.log('Error:', err)
-        return res.status(401).json({
+        return res.status(500).json({
             message: 'Product updation failed'
         })
     }
