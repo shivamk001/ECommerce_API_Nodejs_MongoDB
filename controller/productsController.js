@@ -1,5 +1,6 @@
 const Product=require('../models/product')
 
+//middleware to create a product
 module.exports.createProduct=async (req, res)=>{
     try{
         let name=req.body.name;
@@ -28,6 +29,8 @@ module.exports.createProduct=async (req, res)=>{
     }
 }
 
+
+//middleware to delete a product
 module.exports.deleteProduct=async (req, res)=>{
     try{
 
@@ -42,7 +45,7 @@ module.exports.deleteProduct=async (req, res)=>{
             product=await Product.findByIdAndDelete(id)
             return res.status(200).json({
                 data:{
-                    message: 'Product deleted'
+                    message: 'product deleted'
                 }
             })
         }
@@ -61,6 +64,7 @@ module.exports.deleteProduct=async (req, res)=>{
     }
 }
 
+//middleware to list all products
 module.exports.allProducts=async (req, res)=>{
     try{
 
@@ -89,7 +93,7 @@ module.exports.allProducts=async (req, res)=>{
     }
 }
 
-
+//middleware to update a product
 module.exports.updateProduct=async (req, res)=>{
     try{
         let id=req.params.id
@@ -102,7 +106,7 @@ module.exports.updateProduct=async (req, res)=>{
             product=await Product.findById({
                 _id: id
             })
-            return res.status(200).json({
+            return res.status(202).json({
                 message: 'updated successfully',
                 data:{
                     product:{

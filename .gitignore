@@ -3,3 +3,5 @@ ecom_api.docx
 node_modules/
 
 tasks.txt
+
+.env
