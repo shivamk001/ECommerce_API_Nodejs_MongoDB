@@ -3,6 +3,7 @@ ECOMMERCE API IN NODEJS AND MONGODB
 YOU CAN ACCESS THE RUNNING API HERE(please run it on postman for best experience): http://ec2-54-164-160-81.compute-1.amazonaws.com
 
 ENDPOINTS:
+
     a. GET /products: To get all products
     
     b. POST /products/create: To create a product
