@@ -3,10 +3,13 @@ ECOMMERCE API IN NODEJS AND MONGODB
 YOU CAN ACCESS THE RUNNING API HERE(please run it on postman for best experience): http://ec2-54-164-160-81.compute-1.amazonaws.com
 
 ENDPOINTS:
-    GET /products: To get all products
-    POST /products/create: To create a product
-    DELETE /products/:id: to delete a product with the given id
-    POST  /products/:id/update_quantity/?number=<value>: to update the quantity of a product
+    a. GET /products: To get all products
+    
+    b. POST /products/create: To create a product
+    
+    c. DELETE /products/:id: to delete a product with the given id
+    
+    d. POST  /products/:id/update_quantity/?number=<value>: to update the quantity of a product
 
 SETTING UP THE API:
     a. Run the following line of code:
