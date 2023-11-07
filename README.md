@@ -8,8 +8,7 @@ ENDPOINTS:
     DELETE /products/:id: to delete a product with the given id
     POST  /products/:id/update_quantity/?number=<value>: to update the quantity of a product
 
-
-SETTING UP THE API ON WINDOWS:
+SETTING UP THE API:
     a. Run the following line of code:
         git clone https://github.com/shivamk001/ECommerce_API_Nodejs_MongoDB.git
         cd ECommerce_API_Nodejs_MongoDB
