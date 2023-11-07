@@ -20,6 +20,11 @@ app.use(bodyParser.json())
 //to routes middleware
 app.use('/', require('./routes'))
 
+app.use((err, req, res, next)=>{
+    console.log(err)
+    return res.status(404).json("message:", err)
+})
+
 //setting port according to the environment
 let PORT=process.env.PORT||8765
 app.listen(PORT, (err)=>{
